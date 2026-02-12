@@ -17,3 +17,4 @@ Thumbs.db
 # Project
 *.log
 .cache/
+.env

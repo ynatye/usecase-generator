@@ -55,7 +55,7 @@ def cli():
 @click.option("--all-tier1", is_flag=True, help="Generate all industries × tier1 departments")
 @click.option("--industry-all", "-i", help="Generate all tier1 departments for one industry")
 @click.option("--department-all", "-d", help="Generate all industries for one department")
-@click.option("--format", "-f", type=click.Choice(["v1", "v2"]), default="v2", help="Output format version")
+@click.option("--format", "-f", type=click.Choice(["v1", "v2", "v3"]), default="v2", help="Output format version")
 @click.option("--force", is_flag=True, help="Overwrite existing playbooks")
 @click.option("--model", "-m", help="Override model (default: claude-sonnet-4-20250514)")
 @click.option("--dry-run", is_flag=True, help="Show what would be generated without generating")

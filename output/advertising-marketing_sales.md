@@ -2,443 +2,537 @@
 
 ## Overview
 
-Sales in advertising and marketing agencies is fundamentally different from product sales. There's no fixed product, no price list, and no simple feature comparison. Agency sales (often called "New Business" or "Business Development") is about selling capabilities, chemistry, and the promise of creative problem-solving. It's long-cycle, relationship-driven, and often frustrating.
+Sales teams in advertising and marketing agencies operate in one of the most relationship-driven, high-velocity environments in B2B services. A mid-size agency (50–500 employees) typically runs a sales org of 5–30 people spanning Business Development Representatives (BDRs), Account Executives (AEs), and New Business Directors, all supported by pitch coordinators, RFP specialists, and sales operations analysts. Revenue cycles are project-based and retainer-based, with deal sizes ranging from $50K campaign engagements to $10M+ AOR (Agency of Record) relationships. The sales pipeline is inherently lumpy — a single RFP win can represent 20% of annual revenue.
 
-The Sales function in agencies typically spans new business development (hunting new clients), pitch management (RFP responses and proactive pitches), partnership development (client referrals, agency partnerships), and expansion (growing existing clients into new services). At mid-to-large agencies, this function is usually a small dedicated team (2-10 people) supported by agency leadership who serve as closers.
+The regulatory environment is lighter than financial services but increasingly complex: data privacy (GDPR, CCPA) affects what agencies can promise in pitches, and procurement-driven RFP processes at Fortune 500 clients demand SOC 2 compliance documentation, D&I reporting, and sustainability commitments alongside creative credentials. Agencies must track not just pipeline but also conflict checks (can't pitch Pepsi if you hold Coca-Cola), team availability for pitch staffing, and win/loss forensics that inform positioning.
 
-What makes this combination unique: Agency sales cycles are long (3-12 months for major clients), the competition is often blind (you don't know who you're pitching against), and the "product" changes with every pitch. Win rates on RFPs are often 15-25%, making efficiency crucial. AI can accelerate research, personalize pitches, and give better visibility into what's working and what isn't.
+The fundamental challenge for agency sales teams is that every deal is a custom proposal. Unlike SaaS where you demo a product, agencies sell ideas, teams, and capabilities — which means the sales process is deeply cross-functional, requiring creative, strategy, media, and production teams to collaborate on pitches. This makes pipeline visibility, resource coordination, and institutional knowledge critical competitive advantages.
 
----
+## Value Driver Mapping
 
-## Value Driver Prioritization
-
-1. **Scale Impact Without Overhead** — HIGHEST RELEVANCE
-   - New business teams are always too small for the opportunity
-   - Each pitch requires significant research and customization
-   - AI enables more pitches, better research, and faster turnaround
-   
-2. **Replace or Radically Augment Headcount** — HIGH RELEVANCE
-   - Pitch research, credential customization, and proposal writing consume time
-   - BizDev professionals spend hours on research that AI could accelerate
-   - Administrative tasks (tracking, follow-up) can be automated
-
-3. **Consolidate Tech Stack with AI** — MEDIUM RELEVANCE
-   - BizDev often uses a patchwork of CRM, spreadsheets, and email
-   - Integration with marketing, case studies, and proposal tools is rare
-   - One system connecting pipeline, content, and outcomes improves efficiency
-
----
+| Priority | Value Driver | Relevance | Why |
+|----------|-------------|-----------|-----|
+| 1 | Replace or Radically Augment Headcount | High | Pitch coordination, RFP responses, and proposal assembly consume 30-40% of senior sales time — AI agents can draft, assemble, and quality-check proposals |
+| 2 | Scale Impact Without Overhead | High | Agencies need to pursue more pitches without proportionally growing sales headcount; AI-powered pipeline management and pitch automation enable this |
+| 3 | Consolidate Tech Stack with AI | Medium-High | Agency sales teams typically juggle Salesforce/HubSpot, Google Slides, Slack, email, and spreadsheets for pipeline — monday.com unifies workflow with CRM |
 
 ## Prioritized Use Cases
 
-### 1. New Business Pipeline & CRM
-**Relevance**: High  
-**Value Driver**: 2 (Consolidate Tech Stack)
+---
 
-**Pain Point**: 
-Agency pipelines are opaque. Opportunities live in emails, heads, and scattered spreadsheets. Leadership asks "what's in the pipeline?" and gets a different answer every time. There's no systematic tracking of where opportunities came from, why they were won or lost, or what the realistic revenue forecast is.
+### Use Case 1: Unified New Business Pipeline & Pitch Tracker
 
-**Solution**: 
-monday.com CRM designed for agency new business. Track every opportunity from first touch to close, with stages that reflect agency sales reality (not product sales). Capture source, qualification criteria, and win/loss reasons. AI helps score and prioritize.
+**Relevance:** High
+**Value Driver:** Consolidate Tech Stack with AI
 
-**Vibe Prompt**:
-```
-Build a New Business Pipeline app for agency business development teams.
+#### The Pain
+Agency new business teams track opportunities across email threads, spreadsheets, Salesforce (poorly configured), and the head of new business's memory. When a CMO reaches out about a potential AOR review, the information lives in someone's inbox. Conflict checks require manually cross-referencing the client list. Pipeline reviews happen in PowerPoint decks that are outdated the moment they're created. The CEO asks "what's our pipeline?" and gets three different numbers from three different people. Win rates are tracked retroactively (if at all), and there's no institutional memory of why deals were lost.
 
-Purpose: Track new business opportunities from awareness to close with full pipeline visibility.
+#### The Solution
+monday.com CRM configured specifically for agency new business: a pipeline board with stages reflecting the agency pitch process (Lead Identified → Conflict Check → Chemistry Meeting → RFP Received → Pitch Team Assembled → Credentials Submitted → Tissue Session → Final Pitch → Decision Pending → Won/Lost). Custom columns for estimated annual revenue, contract type (AOR/Project/Retainer), industry vertical, conflict status, pitch team members, and competitive set. Dashboards showing pipeline by stage, expected revenue by quarter, win rate by vertical, and pitch team utilization. Automations for conflict check alerts, stage-based notifications, and stale deal flagging.
 
-Key features:
-- Opportunity board: Prospect name, Industry, Company size, Source (Inbound/Referral/Outbound/RFP/Event), Estimated value (annual), Owner, Status
-- Agency-specific stages: Awareness → Qualified → Intro Meeting → Chemistry → Pitch/Proposal → Negotiation → Won/Lost
-- Contact management: Key contacts, Decision maker, Champion, Influencers, Meeting history
-- Qualification criteria: Budget, Authority, Need, Timeline (BANT), Fit score
-- AI lead scoring: Score based on fit criteria, engagement level, and historical patterns
-- Activity tracking: Calls, emails, meetings, proposals — logged automatically where possible
-- Win/loss tracking: When closed, capture outcome, reasons, and learnings
-- Revenue forecasting: Weighted pipeline by stage and probability
-- Dashboard: Pipeline by stage, By source, Forecast, Win rate, Average deal size, Velocity (time to close)
+#### The Outcome
+Single source of truth for pipeline — 100% visibility for leadership without asking. Conflict checks reduced from days to seconds. Win/loss data captured systematically, enabling pattern analysis. Pipeline accuracy improves 40-60% vs. spreadsheet tracking. Pitch team allocation visible, preventing over-commitment.
 
-Include automations:
-- When opportunity created, auto-score based on fit criteria
-- When stage changes, notify team and update probability
-- When no activity for 14 days, prompt owner
-- When opportunity won/lost, prompt for win/loss analysis
-- Weekly pipeline review email to leadership
-```
+#### Discovery Questions
+1. "How do you currently track what's in your new business pipeline — and how confident are you in that number right now?"
+2. "When a potential conflict comes up, how long does it take to verify whether you can pursue an opportunity?"
+3. "After a pitch loss, how do you capture and share what you learned with the broader team?"
+4. "How do you decide which opportunities to pursue vs. pass on — is there a formal go/no-go process?"
+5. "How many pitches is your team running simultaneously right now, and do you have visibility into who's staffed on what?"
 
-**Outcome**: 
-- Clear visibility into pipeline and forecast
-- Better prioritization of opportunities
-- Systematic learning from wins and losses
-- Accountability for follow-up
-
-**Discovery Questions**:
-- "If I asked you right now what your new business pipeline looks like, how quickly could you answer with confidence?"
-- "What's your win rate on pitches? Do you track it?"
-- "When you lose a pitch, do you know why? Is that knowledge captured somewhere?"
-
-**Industry-Specific Context**: 
-Agency sales cycles: 3-6 months for mid-market, 6-12 months for enterprise. "Chemistry meeting" = client/agency compatibility assessment. "Pitch" = formal presentation of capabilities and proposed approach.
+#### Industry Context
+Agency new business is unique because deals aren't just "closed" — they're "won" through a multi-stage pitch process that can take 3-6 months. The "chemistry meeting" is a critical early stage where the agency meets the client to assess mutual fit. "Tissue sessions" are interim creative reviews. AOR (Agency of Record) deals are the holy grail — multi-year retainers worth millions. Conflict management is legally and ethically critical: holding a competing account can disqualify an agency immediately. The "competitive set" (which other agencies are pitching) dramatically affects strategy.
 
 ---
 
-### 2. Pitch & Proposal Management
-**Relevance**: High  
-**Value Driver**: 1 (Replace/Augment Headcount)
+#### 🔧 VIBE PROMPT
 
-**Pain Point**: 
-RFPs and pitches are resource-intensive. Each requires customized research, tailored credentials, a strategic approach, and often speculative creative work. Teams scramble to assemble materials, reinvent the wheel, and work late nights. The process is chaotic and stressful.
+> **"Build This Live" Prompt:**
+>
+> "Build me an agency new business pipeline tracker. Create a board called 'New Business Pipeline' with these columns: Deal Name (text), Prospect Company (text), Industry Vertical (dropdown: CPG, Tech, Financial Services, Healthcare, Retail, Automotive, Entertainment, QSR, Travel, Luxury, Other), Estimated Annual Revenue (numbers, in dollars), Contract Type (dropdown: AOR, Project, Retainer, Hybrid), Pipeline Stage (status: Lead Identified, Conflict Check, Chemistry Meeting, RFP Received, Pitch Team Assembled, Credentials Submitted, Tissue Session, Final Pitch, Decision Pending, Won, Lost, Declined to Pitch), Conflict Status (status: Clear, Potential Conflict, Conflict Confirmed, Waiver Requested), Lead Source (dropdown: Inbound, Referral, Consultant/Search Firm, Existing Relationship, Event/Conference, Cold Outreach), Pitch Lead (people), Pitch Team (people), Expected Decision Date (date), Competitive Set (long text), Go/No-Go Decision (status: Pending, Go, No-Go), Win/Loss Reason (long text). Add automations: when Conflict Status changes to Potential Conflict, notify the Head of New Business; when Pipeline Stage changes to Won, send a celebration notification to the #wins channel; when Expected Decision Date is more than 7 days past and Pipeline Stage is Decision Pending, notify the Pitch Lead. Create a Kanban view grouped by Pipeline Stage, a Dashboard view showing pipeline value by stage (chart), win rate by quarter (chart), and deals by Industry Vertical (chart), and a Timeline view showing pitch timelines by Expected Decision Date."
 
-**Solution**: 
-monday.com pitch management that brings structure to chaos. Track RFP requirements systematically, manage the pitch team's work, pull from existing assets (case studies, credentials), and use AI to accelerate research and drafting. Never miss a deadline or forget a requirement.
-
-**Vibe Prompt**:
-```
-Build a Pitch & Proposal Management app for agency new business teams.
-
-Purpose: Manage RFPs and pitches from intake to submission with team coordination and asset management.
-
-Key features:
-- Pitch intake: Opportunity link, RFP received date, Due date, Client, Industry, Requirements summary
-- Requirements parsing: Extract and track all RFP requirements as checklist items
-- Pitch team: Roles needed (Strategy Lead/Creative Lead/Account Lead/Production), Assigned team members
-- Work plan: Tasks needed, Owners, Due dates, Status — working back from deadline
-- Asset assembly: Case studies to include (pull from library), Credentials deck, Team bios, Pricing
-- AI research assist: Company background, Industry trends, Competitive landscape, News monitoring
-- AI drafting assist: Draft sections based on requirements and past successful pitches
-- Review workflow: Draft → Internal review → Leadership review → Final
-- Submission tracking: Submitted date, Confirmation, Follow-up scheduled
-- Dashboard: Active pitches, By stage, Deadline countdown, Team workload, Asset reuse stats
-
-Include automations:
-- When pitch created, generate task template based on timeline and pitch type
-- When requirement added, check for relevant case studies
-- 48 hours before deadline, alert team of incomplete items
-- When submitted, schedule follow-up reminders
-- When pitch outcome known, update pipeline and prompt for debrief
-```
-
-**Outcome**: 
-- More organized pitch process (less scrambling)
-- Faster pitch assembly through asset reuse
-- Better research with AI assistance
-- Higher quality submissions
-
-**Discovery Questions**:
-- "How many pitches do you have active at any given time? How do you track them?"
-- "When you start a new pitch, how much do you reuse vs. create from scratch?"
-- "How much time does your team spend on pitch research?"
-
-**Industry-Specific Context**: 
-RFP = Request for Proposal (formal). RFI = Request for Information (early stage). "Spec creative" = speculative creative work done during pitch (controversial but common). "Pitch deck" = presentation for pitch meeting.
+Note: Vibe builds apps/boards/workflows — NOT agents.
 
 ---
 
-### 3. Credentials & Case Study Assembly
-**Relevance**: High  
-**Value Driver**: 1 (Replace/Augment Headcount)
+#### 🤖 AGENT BLUEPRINT — monday AI Agents *(coming soon)*
 
-**Pain Point**: 
-Every pitch needs credentials — proof that you've done relevant work. But case studies are scattered, outdated, or missing key information. BizDev teams spend hours hunting for the right examples, then reformatting them for each pitch. The same case study gets recreated from scratch multiple times.
+**Agent Name:** New Business Intelligence Agent
+**Agent Purpose:** Automatically enrich pipeline entries, flag conflicts, and generate pitch preparation briefs.
 
-**Solution**: 
-monday.com case study library integrated with pitch process. Maintain a searchable, always-current library of case studies with all necessary assets. AI recommends relevant case studies for each pitch based on industry, service type, and challenge.
+**Triggers:**
+- New item created in Pipeline board
+- Prospect Company field updated
+- Pipeline Stage changes to "RFP Received"
+- Weekly scheduled digest (Monday 8 AM)
+- Manual trigger by Pitch Lead
 
-**Vibe Prompt**:
-```
-Build a Credentials & Case Study Library app for agency new business teams.
+**Actions:**
+- Auto-populate Industry Vertical and company details by researching the prospect
+- Cross-reference Prospect Company against current client list and flag conflicts
+- Generate a "Pitch Prep Brief" with prospect's recent news, marketing spend data, competitive landscape, and key stakeholders
+- Create a win/loss analysis summary when deal moves to Won or Lost
+- Send weekly pipeline digest to leadership with movement, risks, and recommended actions
+- Alert when a deal has been in the same stage for more than the average duration
 
-Purpose: Maintain a searchable library of case studies and credentials for pitch assembly.
+**Data Required:**
+- Current client list (for conflict checks)
+- Company research APIs (Clearbit, LinkedIn, press databases)
+- Historical win/loss data from past deals
+- Industry benchmarking data for revenue estimates
 
-Key features:
-- Case study database: Project name, Client, Industry, Service type, Challenge, Solution, Results, Assets (deck slides, images, video), Status (Draft/Approved/Needs Update)
-- Taxonomy: Industry tags, Service tags, Capability tags, Results type (brand/performance/engagement)
-- Search and filter: Find case studies by any combination of tags
-- AI recommendations: Given pitch requirements, suggest most relevant case studies
-- Version tracking: Multiple versions (long/short/one-pager), Last updated date
-- Results database: Quantified results searchable across all case studies
-- Client approval status: Can we name the client? Use specific results? Show creative?
-- Quick export: Generate formatted case study slides for pitch deck
-- Dashboard: Total case studies, By industry, By service, Recently updated, Update needed (flagged)
+**Autonomy Level:** Human-in-the-Loop
+The agent enriches data and generates recommendations autonomously but requires human approval for conflict determinations (too legally sensitive to automate fully) and go/no-go recommendations. All generated briefs are drafts that Pitch Leads review.
 
-Include automations:
-- When pitch created, AI suggests relevant case studies
-- When case study >12 months old, flag for update
-- When project wins award, prompt to update case study
-- When client approval changes, update all affected versions
-- Quarterly case study audit: What's missing by industry/service
-```
-
-**Outcome**: 
-- Faster pitch assembly (minutes, not hours, to find case studies)
-- Consistent, always-current case study library
-- More relevant case studies in pitches (AI-matched)
-- Never scramble for proof points again
-
-**Discovery Questions**:
-- "When you need a case study for a pitch, how long does it take to find the right one?"
-- "How many of your case studies are current? How many need updates?"
-- "Have you ever lost a pitch because you couldn't prove relevant experience?"
-
-**Industry-Specific Context**: 
-Case studies are the currency of agency pitches. "Credentials deck" = overview of agency experience. Client approval is often the bottleneck. Award wins significantly increase case study value.
+**Example Interaction:**
+> A BDR logs a new lead: "Acme Consumer Products - potential AOR review." The New Business Intelligence Agent immediately springs into action, researching Acme's recent marketing activity, current agency roster, and estimated marketing spend ($45M annually across brand and performance). Within minutes, it populates the deal record with industry vertical (CPG), estimated annual revenue ($3.2M based on typical CPG AOR fee structures), and key contacts.
+>
+> The agent then runs a conflict check against the current client roster and flags a potential issue: "⚠️ Potential Conflict: You currently hold BrightClean Detergents (CPG/Household). Acme Consumer Products competes directly in the household cleaning category. Recommend legal review before proceeding." The Head of New Business receives an instant notification and can make the call.
+>
+> When the opportunity progresses to RFP Received, the agent generates a comprehensive Pitch Prep Brief: Acme's last three years of campaign work, their CMO's public statements about brand strategy, recent earnings call mentions of marketing investment, and a competitive set analysis showing which agencies are likely also pitching based on industry relationships.
 
 ---
 
-### 4. Prospect Research & Intelligence
-**Relevance**: High  
-**Value Driver**: 1 (Replace/Augment Headcount)
+### Use Case 2: RFP Response & Proposal Assembly Workflow
 
-**Pain Point**: 
-Effective agency sales requires deep research — understanding the prospect's business, challenges, competitors, and decision-makers. This research is time-consuming and often shallow due to time pressure. Junior BizDev staff don't know what to look for; senior staff don't have time to do it.
+**Relevance:** High
+**Value Driver:** Replace or Radically Augment Headcount
 
-**Solution**: 
-monday.com prospect intelligence with AI-powered research. For each target company, automatically gather and synthesize relevant information. AI monitors news and triggers, suggests talking points, and identifies potential decision-makers.
+#### The Pain
+When an RFP lands, it triggers a fire drill. The new business director reads through a 40-page document, identifies requirements, and starts emailing department heads for inputs: case studies from creative, methodology decks from strategy, bios from the proposed team, rate cards from finance, compliance docs from legal, and D&I statistics from HR. Each person responds on their own timeline (or doesn't). The pitch coordinator lives in a spreadsheet tracking who owes what, sending increasingly desperate follow-up emails. Proposal assembly happens in the final 48 hours in a Google Slides deck where version control is a prayer. Senior leaders review at the last minute and request changes that cascade through 200 slides. The agency submits — exhausted — and then can't remember three months later what they actually proposed.
 
-**Vibe Prompt**:
-```
-Build a Prospect Intelligence app for agency business development teams.
+#### The Solution
+monday.com Work Management as the RFP response command center. A templated project board auto-created when a deal reaches "RFP Received" stage, with pre-populated tasks for every standard RFP section (Agency Overview, Team Bios, Case Studies, Methodology, Pricing, Compliance, D&I, Sustainability). Each task assigned to the responsible department with deadline driven by the submission date. A content library board storing approved case studies, bios, boilerplate language, and compliance docs — searchable and version-controlled. Automations notify owners, escalate overdue items, and track completion percentage. Dashboards show real-time readiness across all active RFPs. Integration with Google Workspace/Office 365 for document collaboration.
 
-Purpose: Systematically research and track target prospects with AI-powered intelligence gathering.
+#### The Outcome
+RFP response time reduced by 35-50%. Pitch coordinator role shifts from "chasing people" to "quality assurance." Proposal quality improves through standardized components and proper review cycles. Institutional knowledge preserved — every proposal archived and searchable for future pitches. Parallel RFP management becomes feasible (agencies typically cap at 3-4 simultaneous pitches due to coordination overhead; this raises the ceiling to 6-8).
 
-Key features:
-- Target account board: Company name, Industry, Size, Priority tier, Owner, Status (Research/Outreach/Engaged/Opportunity)
-- AI research profile: Auto-populated company overview, Recent news, Key executives, Marketing activities, Competitive landscape
-- Stakeholder mapping: Key contacts, Roles, LinkedIn profiles, Relationship history
-- Trigger monitoring: AI monitors for news, job changes, campaign launches, agency reviews — alerts when relevant
-- Talking points generator: AI suggests personalized talking points based on company research
-- Competitor watch: Track prospect's competitors and their agency relationships
-- Engagement history: All touchpoints logged (emails, meetings, events)
-- Dashboard: Accounts by tier, Research status, Recent triggers, Engagement activity
+#### Discovery Questions
+1. "Walk me through what happens in the first 24 hours after you receive an RFP — who does what?"
+2. "How many hours per week does your pitch coordinator spend chasing people for content?"
+3. "Do you have a centralized library of approved case studies, bios, and boilerplate — or does everyone recreate from scratch?"
+4. "How many RFPs can you realistically run simultaneously before quality drops?"
+5. "After you submit a proposal, can you easily find what you proposed six months later if the client comes back?"
 
-Include automations:
-- When account added, AI generates initial research profile
-- When trigger detected (news, agency review, key hire), alert owner
-- When no engagement in 30 days, suggest outreach approaches
-- Weekly intelligence digest: Key triggers across target accounts
-- When opportunity created, link to research profile
-```
-
-**Outcome**: 
-- Better research with less effort
-- Proactive awareness of opportunities (triggers)
-- More personalized, effective outreach
-- Systematic approach to account targeting
-
-**Discovery Questions**:
-- "How much time does your team spend on prospect research? Is it thorough or rushed?"
-- "How do you find out about agency reviews or opportunities in the market?"
-- "When you reach out to a prospect, how personalized is your approach?"
-
-**Industry-Specific Context**: 
-"Agency review" = when a client is evaluating new agencies (major trigger). Trade publications (AdAge, Campaign, etc.) report reviews. LinkedIn is primary research tool for contacts. "Stakeholder mapping" = identifying all decision-makers and influencers.
+#### Industry Context
+Agency RFPs are uniquely complex because they require both operational content (team structure, pricing, process) and creative content (spec work, strategic thinking, campaign concepts). The "tissue session" is a mid-process client check-in where the agency presents early thinking — it's essentially a pitch within the pitch. "Spec work" (speculative creative done for the pitch) is controversial in the industry but increasingly expected by clients. Rate cards in agencies are complex: different roles (SVP Creative Director vs. Junior Designer) have different rates, and clients often negotiate blended rates. D&I and sustainability sections have gone from "nice to have" to "required" in Fortune 500 RFPs.
 
 ---
 
-### 5. Outbound Prospecting & Outreach
-**Relevance**: Medium-High  
-**Value Driver**: 3 (Scale Without Overhead)
+#### 🔧 VIBE PROMPT
 
-**Pain Point**: 
-Most agencies know they should do more proactive outreach but struggle to execute consistently. Cold outreach is uncomfortable, time-consuming, and often ineffective. When it is done, there's no system — random emails sent from personal inboxes with no tracking or follow-up.
+> **"Build This Live" Prompt:**
+>
+> "Build me an RFP response management system. Create a board called 'RFP Response Tracker' with columns: RFP Name (text), Client (text), Submission Deadline (date), Response Status (status: Intake, Requirements Analysis, Content Collection, Assembly, Internal Review, Final QA, Submitted), RFP Lead (people), Pitch Team (people), Overall Completion (progress tracking). Create a connected board called 'RFP Task Breakdown' with columns: Task Name (text), RFP Section (dropdown: Agency Overview, Team & Staffing, Case Studies, Methodology & Approach, Strategic Response, Spec Creative, Pricing & Rate Card, Compliance & Legal, D&I Report, Sustainability, Technology & Tools, References), Owner (people), Due Date (date), Task Status (status: Not Started, In Progress, In Review, Approved, Blocked), Priority (status: Critical Path, High, Medium, Low), Content Source (text), Notes (long text). Add automations: when a new item is created on RFP Response Tracker, auto-create a task breakdown from a template with all standard sections; when Task Status on any RFP Task is Blocked, notify the RFP Lead immediately; when Due Date is tomorrow and Task Status is Not Started, send urgent reminder to Owner; when all tasks in an RFP reach Approved, change Response Status to Final QA. Create a content library board called 'Pitch Content Library' with columns: Content Name (text), Content Type (dropdown: Case Study, Team Bio, Methodology, Boilerplate, Compliance Doc, Rate Card Template, D&I Report, Sustainability Report), Industry Vertical (dropdown), Last Updated (date), Owner (people), File (files), Version (numbers). Create a Dashboard showing completion percentage across all active RFPs, overdue tasks by owner, and a timeline of upcoming submission deadlines."
 
-**Solution**: 
-monday.com outreach sequences integrated with prospect intelligence. Plan and execute personalized outreach campaigns, track responses, and manage follow-up systematically. AI helps personalize messages at scale.
-
-**Vibe Prompt**:
-```
-Build an Outbound Prospecting app for agency business development teams.
-
-Purpose: Plan, execute, and track outbound outreach campaigns with AI-powered personalization.
-
-Key features:
-- Campaign board: Campaign name, Target list, Theme/hook, Status (Planning/Active/Paused/Complete), Owner
-- Target selection: Pull from prospect database by criteria, or upload list
-- Sequence design: Multi-touch sequences (Email 1 → LinkedIn → Email 2 → Call), Timing between touches
-- AI message drafting: Generate personalized outreach based on prospect research profile
-- Message templates: Library of proven templates by industry/persona
-- Execution tracking: Each prospect's status in sequence, Opens, Replies, Meetings booked
-- Response handling: When reply received, categorize (Interested/Not Now/Not Interested) and route appropriately
-- Performance analytics: Response rates by campaign, by message, by persona
-- Dashboard: Active campaigns, Contacts in sequence, Response rates, Meetings booked, Pipeline generated
-
-Include automations:
-- When prospect added to campaign, generate personalized message for review
-- When positive reply received, create opportunity and notify owner
-- When sequence complete with no response, flag for alternative approach
-- Weekly campaign performance report
-- A/B test tracking for message variations
-```
-
-**Outcome**: 
-- Consistent outbound activity (not feast-or-famine)
-- Higher response rates through personalization
-- Clear visibility into what's working
-- Pipeline generation beyond RFPs and referrals
-
-**Discovery Questions**:
-- "How much of your new business comes from proactive outreach vs. inbound?"
-- "When you do outbound, is it systematic or ad hoc?"
-- "What's your response rate on cold outreach? Do you know?"
-
-**Industry-Specific Context**: 
-Agency outreach is typically relationship-focused, not transactional. Events, content, and thought leadership warm up cold outreach. "Always be helping" > "always be closing" for agency sales. LinkedIn is the primary channel.
+Note: Vibe builds apps/boards/workflows — NOT agents.
 
 ---
 
-### 6. Win/Loss Analysis & Learning
-**Relevance**: Medium  
-**Value Driver**: 3 (Scale Without Overhead)
+#### 🤖 AGENT BLUEPRINT — monday AI Agents *(coming soon)*
 
-**Pain Point**: 
-When pitches end, the learning usually doesn't happen. Wins are celebrated; losses are forgotten. The patterns of why the agency wins and loses — pricing? capabilities? chemistry? — remain hidden. The same mistakes are repeated.
+**Agent Name:** RFP Assembly Agent
+**Agent Purpose:** Automatically parse RFP requirements, match them to existing content, and draft proposal sections.
 
-**Solution**: 
-monday.com win/loss system that captures and analyzes outcomes. For every pitch, document the outcome and reasons. Over time, build a learning database that reveals patterns and improves future performance.
+**Triggers:**
+- New RFP document uploaded to an item
+- RFP Section task moved to "In Progress"
+- Manual trigger: "Draft this section"
+- 72 hours before submission deadline (final check)
+- Content Library item updated (re-match against active RFPs)
 
-**Vibe Prompt**:
-```
-Build a Win/Loss Analysis app for agency business development and leadership.
+**Actions:**
+- Parse uploaded RFP document and auto-create task breakdown with section-by-section requirements
+- Match RFP requirements against Pitch Content Library and suggest best-fit case studies, bios, and boilerplate
+- Draft first-pass responses for standard sections (Agency Overview, Methodology, Compliance) using approved content
+- Flag non-standard requirements that need custom responses and assign to appropriate SMEs
+- Generate a "Compliance Checklist" ensuring every stated requirement has a mapped response
+- 72 hours before deadline: audit all sections, flag gaps, and send status report to RFP Lead
 
-Purpose: Systematically capture and analyze pitch outcomes to improve win rates.
+**Data Required:**
+- Pitch Content Library (all approved content)
+- Historical proposals (for language and approach patterns)
+- RFP document (PDF/Word parsing capability)
+- Team availability and bio database
+- Current rate cards and pricing models
 
-Key features:
-- Outcome capture: When opportunity closes, record Won/Lost, Primary reason, Secondary factors, Competitor (if known), Decision maker, Feedback verbatim
-- Reason taxonomy: Pricing, Capabilities, Chemistry, Experience, Creative approach, References, Existing relationship, Timing
-- Client debrief: Track whether debrief was requested, completed, key learnings
-- Pattern analysis: AI identifies trends across wins and losses (e.g., "60% of losses cite pricing")
-- Competitor tracking: How often do we win/lose against specific competitors?
-- Recommendations: AI suggests improvements based on patterns
-- Learning repository: Searchable database of all outcomes with learnings
-- Dashboard: Win rate trends, Loss reasons breakdown, Competitor performance, Industry patterns, Learnings summary
+**Autonomy Level:** Escalation-Based
+The agent drafts and suggests autonomously but escalates for: pricing decisions (always human), case study selection for competitive pitches (strategic choice), and any section flagged as "Custom/Strategic" in the RFP requirements. Standard compliance and boilerplate sections can be auto-populated with human review at the end.
 
-Include automations:
-- When opportunity closed, prompt for win/loss analysis (required before close)
-- When loss recorded, schedule client debrief request
-- Quarterly win/loss review: Generate summary report with patterns
-- When pattern identified (e.g., repeated loss reason), alert leadership
-- Annual win/loss presentation auto-generated
-```
-
-**Outcome**: 
-- Systematic learning from every outcome
-- Visibility into why you win and lose
-- Actionable insights to improve win rate
-- Reduced repetition of mistakes
-
-**Discovery Questions**:
-- "When you lose a pitch, do you know exactly why? Is it documented?"
-- "What's your biggest reason for losing pitches? Are you sure?"
-- "Do you see patterns across wins and losses, or is every outcome a surprise?"
-
-**Industry-Specific Context**: 
-Post-pitch debriefs from clients are valuable but rare; must be requested. "Competitive intelligence" includes knowing which agencies you tend to beat vs. lose to. Win rates vary widely by pitch type (RFP vs. referral vs. proactive).
+**Example Interaction:**
+> A 52-page RFP arrives from GlobalBev Corp for a digital AOR review. The RFP Assembly Agent parses the document within minutes and creates 18 task items in the RFP Task Breakdown board, each mapped to a specific RFP requirement. It highlights three non-standard requirements: "Provide your agency's approach to AI-generated content governance," "Detail your carbon offset program for production shoots," and "Include a 90-day onboarding plan with named team members."
+>
+> For the 12 standard sections, the agent pulls matching content from the library: three relevant CPG case studies (ranked by recency and relevance), pre-approved methodology language, and the latest compliance documentation. It drafts first-pass responses, noting where content was sourced and confidence level. For the "Team & Staffing" section, it cross-references the proposed team's current workload and flags: "⚠️ Sarah Chen (proposed Strategy Lead) is staffed on 2 other active pitches with overlapping timelines. Consider alternative: James Park (available, similar vertical experience)."
+>
+> With 72 hours to go, it runs a final audit: "16 of 18 sections complete. Missing: AI Content Governance (assigned to Legal, overdue by 1 day) and 90-Day Onboarding Plan (assigned to Account Director, in progress). Pricing section flagged for SVP review — proposed blended rate is 12% above last successful CPG pitch."
 
 ---
 
-## Industry Terminology Glossary
+### Use Case 3: Sales Forecasting & Revenue Planning for Agency Finance
 
-**RFP (Request for Proposal)** — Formal solicitation from a client seeking agency proposals; often competitive with multiple agencies invited.
+**Relevance:** High
+**Value Driver:** Scale Impact Without Overhead
 
-**RFI (Request for Information)** — Preliminary inquiry to gather information before issuing an RFP; often used to narrow a long list.
+#### The Pain
+Agency revenue forecasting is notoriously unreliable. Unlike SaaS with recurring revenue, agencies deal with project-based work (unpredictable timing), retainer clients who may expand or contract scope quarterly, pitch pipeline that converts at wildly different rates by vertical, and "surprise" revenue from existing client expansions that nobody tracked. The CFO builds forecasts in Excel, the Head of New Business gives gut-feel pipeline probabilities, and existing account growth is tracked by individual AEs who update spreadsheets monthly (or don't). Q4 is always a scramble because half the pipeline slipped, two retainer clients cut budgets, but three organic expansions weren't in the forecast. The result: revenue surprises (both positive and negative) that make resource planning nearly impossible.
 
-**Chemistry Meeting** — Meeting to assess interpersonal and cultural fit between client and agency teams.
+#### The Solution
+monday.com dashboards connecting new business pipeline (with weighted probability), existing account health tracking (retainer value, expansion signals, risk flags), and project-based revenue recognition. A unified revenue board that auto-calculates weighted pipeline + confirmed retainer revenue + project backlog. Automations that prompt AEs to update account status monthly, flag at-risk retainers (declining scope, delayed renewals), and surface expansion opportunities. Historical conversion data by stage and vertical feeding more accurate probability weighting. Integration with accounting systems for actuals vs. forecast tracking.
 
-**Pitch** — Formal presentation of agency capabilities and approach to a prospective client.
+#### The Outcome
+Forecast accuracy improves from ±30% to ±10-15%. At-risk retainer revenue identified 60-90 days earlier, enabling save plays. Hidden expansion revenue surfaced and tracked. Resource planning (hiring, freelancer budgeting) aligned to realistic revenue projections. CFO and CEO get real-time revenue visibility without assembling data from five sources.
 
-**Credentials / Creds Deck** — Presentation showcasing agency experience, capabilities, and team.
+#### Discovery Questions
+1. "How accurate was your revenue forecast last quarter — and where did the biggest surprises come from?"
+2. "Do you have visibility into which existing accounts are at risk of reducing scope or churning?"
+3. "How do you weight pipeline probability — is it consistent across the team or individual gut feel?"
+4. "When an existing client wants to expand scope, how does that get captured in the forecast?"
+5. "How far ahead can you confidently forecast — one quarter? Two?"
 
-**AOR (Agency of Record)** — Primary ongoing agency relationship; typically includes broad scope and retainer.
-
-**Project Basis** — One-time engagement for specific scope; lower commitment than AOR.
-
-**Spec Creative** — Speculative creative work produced during a pitch process (not all agencies do this).
-
-**Procurement** — Client's purchasing function; often involved in RFP process and negotiation.
-
-**MSA (Master Service Agreement)** — Overarching contract governing agency-client relationship.
+#### Industry Context
+Agency revenue has three streams: retainer revenue (predictable monthly fees, usually 12-month contracts), project revenue (one-off engagements with defined scope and timeline), and new business pipeline (future potential). "Organic growth" from existing clients is often the largest revenue source but the least tracked. "Scope creep" — where agencies do more work than contracted — is endemic and represents both a margin risk and an expansion opportunity. "Utilization rate" (percentage of billable hours vs. available hours) is the key profitability metric. Agency finance teams track "revenue per head" as a core KPI, typically targeting $200K-$350K depending on agency type and seniority mix.
 
 ---
+
+#### 🔧 VIBE PROMPT
+
+> **"Build This Live" Prompt:**
+>
+> "Build me an agency revenue forecasting system. Create a board called 'Revenue Forecast' with columns: Revenue Source (dropdown: New Business Pipeline, Existing Retainer, Project Revenue, Organic Expansion), Client Name (text), Account Owner (people), Monthly Revenue Value (numbers, in dollars), Annual Contract Value (numbers, in dollars), Revenue Probability (numbers, percentage), Weighted Revenue (formula: Monthly Revenue Value × Revenue Probability / 100), Revenue Status (status: Confirmed, High Confidence, Medium Confidence, Low Confidence, At Risk, Lost), Contract Start Date (date), Contract End Date (date), Renewal Status (status: Auto-Renew, In Negotiation, At Risk, Churned, Not Applicable), Expansion Pipeline (numbers, in dollars), Notes (long text). Create a connected board called 'Account Health Tracker' with columns: Client Name (text), Account Owner (people), Retainer Value (numbers, monthly dollars), Client Satisfaction (status: Thriving, Stable, Needs Attention, At Risk, Critical), Last QBR Date (date), Next Renewal Date (date), Scope Change Trend (status: Expanding, Stable, Contracting), Risk Factors (long text), Expansion Opportunities (long text), NPS Score (numbers). Add automations: when Client Satisfaction changes to At Risk, notify Account Owner and Head of Sales immediately; when Next Renewal Date is 90 days away, create a renewal prep task; when Revenue Status changes to At Risk, update the Revenue Forecast weighted probability to 25%; on the 1st of every month, remind all Account Owners to update their account health status. Create a Dashboard with: total weighted pipeline by quarter (chart), confirmed vs. forecast revenue by month (chart), at-risk revenue requiring attention (number widget), revenue by source type (pie chart), and year-over-year comparison (chart)."
+
+Note: Vibe builds apps/boards/workflows — NOT agents.
+
+---
+
+#### 🤖 AGENT BLUEPRINT — monday AI Agents *(coming soon)*
+
+**Agent Name:** Revenue Intelligence Agent
+**Agent Purpose:** Continuously monitor account health signals and pipeline movement to produce accurate, real-time revenue forecasts.
+
+**Triggers:**
+- Monthly forecast cycle (1st of month)
+- Account Health status changes
+- Pipeline deal stage changes
+- Contract renewal dates approaching (90/60/30 days)
+- Manual request for forecast snapshot
+
+**Actions:**
+- Analyze historical conversion rates by pipeline stage and vertical to auto-weight probabilities
+- Monitor account health indicators and predict churn risk based on engagement patterns
+- Generate monthly forecast report comparing current projections vs. prior month and vs. actuals
+- Flag accounts with declining engagement (fewer updates, stale QBR dates, scope reduction signals)
+- Identify expansion opportunities based on client growth patterns and comparable accounts
+- Produce quarterly board-ready revenue presentation with variance analysis
+
+**Data Required:**
+- Pipeline board with stage history and timestamps
+- Account health tracker with longitudinal data
+- Historical actuals from accounting system integration
+- Client engagement signals (email frequency, meeting cadence, project volume)
+- Industry benchmarks for retainer renewal rates
+
+**Autonomy Level:** Human-in-the-Loop
+Forecast generation and risk flagging are autonomous. Probability adjustments are suggested but require AE confirmation. Churn risk alerts are sent automatically, but save play strategies are recommendations that the Account Owner decides on.
+
+**Example Interaction:**
+> On March 1st, the Revenue Intelligence Agent generates the monthly forecast. It analyzes 47 accounts and 12 active pipeline deals. Key findings: "Q2 forecast is $4.2M weighted (down $380K from last month). Primary drivers: MegaRetail retainer renewal at risk — no QBR in 4 months, last two scope requests declined, recommend immediate executive outreach. Offsetting upside: TechStart organic expansion likely — they've briefed 3 new projects in 6 weeks, pattern matches pre-expansion behavior of similar mid-market tech clients. Recommend proactive proposal for expanded retainer."
+>
+> The agent also flags a pipeline anomaly: "Your win rate on Financial Services pitches has dropped from 35% to 15% over the last 4 quarters. Current pipeline includes 2 FinServ deals weighted at 35%. Suggest reviewing competitive positioning in this vertical or adjusting probability weighting to reflect actual performance."
+
+---
+
+### Use Case 4: Client Prospecting & Lead Qualification Automation
+
+**Relevance:** Medium-High
+**Value Driver:** Replace or Radically Augment Headcount
+
+#### The Pain
+Agency BDRs spend 60-70% of their time on research and qualification rather than actual outreach. Before reaching out to a prospect, they need to understand the company's current agency roster, recent campaign work, marketing leadership changes, budget signals from earnings calls, and industry challenges. This research is manual — scrolling LinkedIn, reading AdAge, checking agency spy sites, and piecing together a picture. When they do reach out, the messaging is often generic because there wasn't time to personalize at scale. The Head of New Business wants 50 qualified outreach attempts per week; the BDR team delivers 15 because research eats their day.
+
+#### The Solution
+monday.com CRM with AI-powered prospecting workflows. A prospect research board where BDRs log target companies and AI agents auto-enrich with agency roster data, recent marketing activity, leadership changes, and industry context. Lead scoring based on signals like "recently changed CMO" (high intent), "in AOR review" (highest intent), "expanding into new markets" (growth signal). Automated outreach sequences with personalized messaging generated from research data. Pipeline handoff workflows from BDR qualification to AE relationship.
+
+#### The Outcome
+BDR research time reduced by 70% — from 45 minutes per prospect to under 15 minutes. Outreach volume triples without additional headcount. Personalization quality actually improves because AI-enriched data is more comprehensive than manual research. Lead-to-meeting conversion rate improves 25-40% due to better targeting and messaging.
+
+#### Discovery Questions
+1. "How long does it take your BDRs to research a prospect before reaching out?"
+2. "What signals tell you a company is likely to be in or approaching an agency review?"
+3. "How personalized are your outreach messages — and does personalization actually affect your response rates?"
+4. "Do you track which prospecting channels and messaging approaches convert best?"
+5. "What's your current lead-to-meeting conversion rate, and where do you think you're losing people?"
+
+#### Industry Context
+"Agency reviews" are the lifeblood of new business — when a brand puts its agency relationship up for competitive bid. Reviews are often triggered by CMO changes, declining business performance, or agency relationship fatigue (average agency tenure is 3-5 years). "Search consultants" (firms like AAR Partners, Pile & Company) often manage the review process. "Credentials presentations" (or "creds decks") are the agency's portfolio — curated by vertical and capability. The "inbound vs. outbound" mix varies: top agencies get 70%+ inbound from reputation; mid-market agencies rely heavily on outbound prospecting.
+
+---
+
+#### 🔧 VIBE PROMPT
+
+> **"Build This Live" Prompt:**
+>
+> "Build me an agency prospecting and lead qualification system. Create a board called 'Prospect Research Pipeline' with columns: Company Name (text), Industry Vertical (dropdown: CPG, Tech, Financial Services, Healthcare, Retail, Automotive, Entertainment, QSR, Travel, Luxury, Telecom, Other), Estimated Marketing Spend (numbers, in dollars), Current Agency Roster (long text), CMO/Marketing Lead (text), Lead Score (numbers, 1-100), Lead Status (status: New, Researching, Qualified, Outreach Scheduled, Contacted, Meeting Set, Disqualified), Intent Signals (dropdown multi-select: CMO Change, AOR Review Announced, New Product Launch, Market Expansion, M&A Activity, Declining Performance, Budget Increase, None Detected), BDR Owner (people), Research Notes (long text), Last Contact Date (date), Next Action Date (date), Outreach Channel (dropdown: Email, LinkedIn, Phone, Event, Referral, Search Consultant), Source (dropdown: AdAge, LinkedIn, Industry Event, Consultant Referral, Press Coverage, Inbound). Add automations: when Lead Score exceeds 75, change Lead Status to Qualified and notify the BDR Owner; when Next Action Date is today, send reminder to BDR Owner; when Lead Status changes to Meeting Set, create a connected item in New Business Pipeline board; when Intent Signals includes 'AOR Review Announced', set Lead Score to 90 and mark as urgent. Create a Dashboard showing prospects by vertical (pie chart), leads by status (funnel chart), BDR activity metrics (outreach attempts vs. meetings set), and lead score distribution."
+
+Note: Vibe builds apps/boards/workflows — NOT agents.
+
+---
+
+#### 🤖 AGENT BLUEPRINT — monday AI Agents *(coming soon)*
+
+**Agent Name:** Prospect Intelligence Agent
+**Agent Purpose:** Automatically research, enrich, and score prospective clients to accelerate BDR outreach.
+
+**Triggers:**
+- New company added to Prospect Research Pipeline
+- Weekly industry news scan (Monday 6 AM)
+- Intent signal detected from monitoring sources
+- Manual trigger: "Research this company"
+- Monthly re-score of all active prospects
+
+**Actions:**
+- Research company and auto-populate marketing spend estimates, current agency relationships, and key contacts
+- Monitor industry press for review announcements, CMO changes, and budget signals
+- Generate personalized outreach messaging based on prospect's specific situation and pain points
+- Score and re-score leads based on accumulating signals
+- Create prospect briefing document before scheduled meetings
+- Identify lookalike companies based on successful conversions (vertical, size, signal pattern)
+
+**Data Required:**
+- Industry press feeds (AdAge, Campaign, Marketing Week, PRWeek)
+- LinkedIn company and people data
+- Agency relationship databases
+- Company financial data for spend estimation
+- Historical conversion data for scoring model
+
+**Autonomy Level:** Escalation-Based
+Research, enrichment, and scoring run fully autonomously. Outreach message drafts are generated but require BDR review before sending. High-priority signals (active AOR review) escalate immediately to Head of New Business for strategic decision on pursuit.
+
+**Example Interaction:**
+> The Prospect Intelligence Agent's weekly scan picks up an AdAge article: "FreshFoods Inc. Initiates Creative Agency Review, Reportedly Dissatisfied with Current AOR." Within minutes, the agent creates a new prospect record with auto-populated data: FreshFoods Inc., estimated $28M annual marketing spend, current AOR is Creativity Partners (held for 6 years), new CMO hired 4 months ago from a DTC brand (signal: likely wants digital-first approach). Lead score: 95.
+>
+> The agent drafts a personalized outreach message referencing the agency's relevant QSR/Food case studies and positions the agency's digital transformation capabilities — directly aligned with what a DTC-background CMO would value. It also identifies the search consultant managing the review (Pile & Company) and notes the agency's existing relationship with a partner there. The BDR receives a complete briefing: "FreshFoods is high-priority. Here's the draft outreach for the CMO's LinkedIn, the consultant contact path, and three relevant case studies to lead with."
+
+---
+
+### Use Case 5: Sales & Creative Collaboration for Pitch Development
+
+**Relevance:** Medium-High
+**Value Driver:** Scale Impact Without Overhead
+
+#### The Pain
+The biggest friction point in agency sales isn't the sales process — it's the handoff between sales and creative/strategy teams. When a pitch is greenlit, the new business team needs to brief the creative department, align on strategy, coordinate spec work timelines, manage tissue sessions with the client, and ensure the final pitch tells a cohesive story. This coordination happens across Slack channels, email threads, and in-person hallway conversations. Creative teams resent being "voluntold" for pitches that weren't communicated well. Strategy teams start work without clear client context. The pitch deck comes together in a chaotic 72-hour sprint where sales, creative, strategy, and production are all editing the same Google Slides deck simultaneously with conflicting feedback. The resulting pitch is often good despite the process, not because of it.
+
+#### The Solution
+monday.com Work Management as the pitch collaboration hub. A pitch project board with clear phases (Brief Development → Strategy → Creative Development → Tissue Prep → Refinement → Final Pitch Assembly → Rehearsal → Pitch Day). Workload management showing creative team availability across pitches and client work. Structured brief templates that capture client context, competitive landscape, and strategic direction. Integrated feedback loops with approval workflows for each pitch component. Timeline views showing critical path dependencies (strategy must be approved before creative begins, creative must be approved before pitch deck assembly).
+
+#### The Outcome
+Pitch preparation time reduced by 25-30%. Creative team satisfaction improves — clear briefs, realistic timelines, visible priorities. Pitch quality improves through structured process rather than heroic last-minute efforts. Ability to run more simultaneous pitches without burning out the creative team. Post-pitch retrospectives captured systematically, improving win rates over time.
+
+#### Discovery Questions
+1. "How would your creative team describe the pitch briefing process — would they say they get what they need to do great work?"
+2. "What's the typical timeline from pitch greenlight to pitch day, and where do the bottlenecks usually hit?"
+3. "How do you manage creative team workload when they're balancing pitches with existing client work?"
+4. "When multiple teams contribute to a pitch deck, how do you ensure strategic coherence?"
+5. "After a pitch, do you do formal retrospectives — and do the learnings actually change how you pitch next time?"
+
+#### Industry Context
+"Spec work" is original creative work produced specifically for a pitch — often the most expensive and time-consuming pitch element. Agencies debate whether to invest heavily in spec (impressive but costly) or focus on strategic thinking (efficient but less flashy). A "tissue session" is an interim client meeting where the agency shares early-stage thinking to get directional feedback before investing in finished creative. "Chemistry meetings" test cultural fit between agency and client teams. The "pitch team" typically includes a senior leader (gravitas), strategy lead (thinking), creative lead (ideas), account lead (relationship), and sometimes a media/digital specialist. "Pitch theater" refers to the production value of the presentation itself — agencies are known for elaborate setups, custom environments, and memorable stunts during final pitches.
+
+---
+
+#### 🔧 VIBE PROMPT
+
+> **"Build This Live" Prompt:**
+>
+> "Build me a pitch collaboration workspace. Create a board called 'Pitch Projects' with columns: Pitch Name (text), Client (text), Pitch Date (date), Pitch Phase (status: Brief Development, Strategy, Creative Development, Tissue Prep, Refinement, Final Assembly, Rehearsal, Pitch Day, Post-Mortem), Pitch Lead (people), Strategy Lead (people), Creative Lead (people), Account Lead (people), Budget (numbers, in dollars), Priority (status: Tier 1 Must-Win, Tier 2 Strong Pursuit, Tier 3 Opportunistic), Spec Work Scope (dropdown: Full Campaign, Key Visual + Concept, Strategic Only, No Spec), Team Capacity Check (status: Green, Yellow, Red). Create a connected board called 'Pitch Tasks' with columns: Task (text), Phase (mirror from Pitch Projects), Owner (people), Due Date (date), Status (status: Not Started, In Progress, Internal Review, Client Feedback, Approved, Blocked), Dependencies (dependency), Deliverable Type (dropdown: Strategic Brief, Creative Brief, Concept Boards, Storyboards, Pitch Deck Section, Budget/Pricing, Competitive Analysis, Case Studies, Rehearsal Notes). Add automations: when all tasks in a Phase reach Approved, advance the Pitch Phase to the next stage; when a task is Blocked, immediately notify the Pitch Lead; 3 days before Pitch Date, send final checklist reminder to entire pitch team; when Pitch Phase changes to Post-Mortem, create a retrospective survey item. Create a workload view showing team members across all active pitches, and a Timeline view showing pitch milestones and dependencies."
+
+Note: Vibe builds apps/boards/workflows — NOT agents.
+
+---
+
+#### 🤖 AGENT BLUEPRINT — monday AI Agents *(coming soon)*
+
+**Agent Name:** Pitch Orchestrator Agent
+**Agent Purpose:** Manage pitch timelines, coordinate cross-functional teams, and ensure nothing falls through the cracks during high-stakes pitches.
+
+**Triggers:**
+- Pitch Phase changes (each transition triggers next-phase setup)
+- Task blocked or overdue
+- Tissue session scheduled (prep required)
+- 48 hours before any major milestone
+- Daily pitch standup digest (8 AM)
+
+**Actions:**
+- Auto-generate phase-specific task lists when pitch advances (e.g., entering Creative Development creates tasks for concept development, mood boards, storyboards, and internal review)
+- Send daily pitch digest to team: what's due today, what's blocked, what's on track
+- Flag resource conflicts when team members are over-allocated across pitches and client work
+- Generate tissue session prep document summarizing work completed and key discussion points
+- Create pitch day checklist and run sheet (who presents what, tech setup, backup plans)
+- After pitch: generate retrospective summary and distribute survey to pitch team
+
+**Data Required:**
+- Pitch Tasks board with all deliverables and timelines
+- Team workload data across all boards (pitches + client work)
+- Historical pitch data for timeline benchmarking
+- Client meeting notes and feedback from tissue sessions
+
+**Autonomy Level:** Fully Autonomous (for coordination); Human-in-the-Loop (for content decisions)
+Task creation, reminders, conflict flagging, and status reporting run automatically. Content-related decisions (creative direction, strategy pivots, spec work scope) always require human judgment. The agent orchestrates the process; humans drive the substance.
+
+**Example Interaction:**
+> It's Tuesday morning and the agency has two active pitches: TechGiant (Tier 1, pitch Friday) and EcoBeauty (Tier 2, pitch in 3 weeks). The Pitch Orchestrator sends the daily digest: "🔴 TechGiant Pitch (3 days out): 2 of 12 tasks overdue — Storyboard Revisions (Creative: Mark, due yesterday) and Pricing Final (Finance: Lisa, due yesterday). Pitch deck is 70% assembled. Rehearsal scheduled Thursday 2 PM — confirm AV setup. ⚠️ Resource conflict: Mark is also assigned to EcoBeauty concept boards due Thursday — recommend reassigning EcoBeauty to Alex (available, briefed on the brand)."
+>
+> The Pitch Lead reviews and approves the reassignment. The agent updates both boards, notifies Alex with context, and adjusts the EcoBeauty timeline. It then generates the TechGiant tissue session recap for the team: "Client feedback from last week's tissue: loved the strategic platform, want to see it pushed further in digital executions. CMO specifically asked for more data-driven personalization examples. Recommend adding the DataDriven Retail case study to the deck."
+
+---
+
+### Use Case 6: Win/Loss Analysis & Competitive Intelligence System
+
+**Relevance:** Medium
+**Value Driver:** Scale Impact Without Overhead
+
+#### The Pain
+Most agencies track wins loudly and losses quietly. When a pitch is lost, there's a brief postmortem email ("they went with a bigger agency" or "it came down to chemistry"), and then everyone moves on. Nobody systematically tracks why deals are won or lost, which competitors keep winning in which verticals, what pricing patterns lead to success, or how the agency's pitch process correlates with outcomes. The Head of New Business has anecdotal knowledge ("we always lose to OmniAgency in automotive") but no data to support strategic decisions about which pitches to pursue, how to differentiate, or where to invest.
+
+#### The Solution
+monday.com board dedicated to win/loss tracking. Every completed deal (won, lost, or declined) gets a detailed post-mortem entry: outcome, decision factors (ranked), competitor analysis, pricing comparison, team feedback, and client feedback (when available). Dashboards showing win rate by vertical, by deal size, by competitor, and by pitch team composition. Quarterly competitive intelligence reports auto-generated from accumulated data. Pattern recognition surfacing actionable insights: "Win rate doubles when we include spec creative" or "We lose 80% of deals where the incumbent is invited to re-pitch."
+
+#### The Outcome
+Data-driven pursuit decisions — stop wasting resources on low-probability pitches. Competitive positioning sharpened based on actual win/loss patterns. Pitch process improvements driven by evidence rather than opinion. Over 12 months, win rate typically improves 5-10 percentage points as the agency learns from its own data.
+
+#### Discovery Questions
+1. "When you lose a pitch, how do you capture what happened — and does that information ever influence future decisions?"
+2. "Do you know your win rate by industry vertical — and has that changed over time?"
+3. "Which competitors do you encounter most often, and do you know your head-to-head record against them?"
+4. "Have you ever declined to pitch something you should have, or pursued something you shouldn't have? How do you make that call?"
+5. "If I asked your creative team and your strategy team why you lost the last three pitches, would they give the same reasons?"
+
+#### Industry Context
+In advertising, "the competitive set" isn't just who you're pitching against — it shapes your entire strategy. Knowing that the client is also talking to a digital-first agency vs. a traditional creative shop changes how you position. "Chemistry" is often cited as a win/loss factor but is hard to systematize — it typically means the personal connection between senior leaders. "Search consultants" sometimes provide post-pitch feedback, which is gold for learning. The industry rule of thumb is a 25-33% win rate for invited pitches — agencies that consistently beat this are doing something systematically right.
+
+---
+
+#### 🔧 VIBE PROMPT
+
+> **"Build This Live" Prompt:**
+>
+> "Build me a win/loss analysis tracker. Create a board called 'Win/Loss Analysis' with columns: Pitch Name (text), Client (text), Industry Vertical (dropdown: CPG, Tech, Financial Services, Healthcare, Retail, Automotive, Entertainment, QSR, Travel, Luxury, Telecom, Other), Deal Value (numbers, annual dollars), Outcome (status: Won, Lost, Declined to Pitch, Client Cancelled Review), Primary Win/Loss Reason (dropdown: Creative Strength, Strategic Thinking, Chemistry/Fit, Pricing, Digital Capabilities, Incumbent Advantage, Specialist Expertise, Team Composition, Agency Reputation, D&I/Sustainability, Other), Secondary Factors (long text), Winning Agency (text), Competitive Set (long text), Included Spec Work (status: Yes Full, Yes Limited, No), Pitch Team Lead (people), Client Decision Maker (text), Search Consultant (text), Feedback Source (dropdown: Client Direct, Search Consultant, Industry Intel, Internal Assessment Only), Decision Date (date), Pitch Date (date), Pricing vs Market (dropdown: Above Market, At Market, Below Market, Unknown), Lessons Learned (long text), Action Items (long text). Add automations: when Outcome is set, notify Head of New Business to schedule debrief; when a new Loss is recorded, auto-create follow-up tasks for competitive analysis update and team feedback collection. Create a Dashboard with: overall win rate by quarter (chart), win rate by Industry Vertical (chart), head-to-head record vs top 5 competitors (table widget), win/loss reasons distribution (pie chart), average deal value won vs lost (chart), and spec work correlation with wins (chart)."
+
+Note: Vibe builds apps/boards/workflows — NOT agents.
+
+---
+
+#### 🤖 AGENT BLUEPRINT — monday AI Agents *(coming soon)*
+
+**Agent Name:** Competitive Intelligence Agent
+**Agent Purpose:** Analyze win/loss patterns, monitor competitive activity, and generate actionable intelligence for pitch strategy.
+
+**Triggers:**
+- New win/loss entry completed
+- Quarterly analysis cycle (1st of quarter)
+- Competitive mention detected in industry press
+- Pre-pitch request: "What do we know about [competitor]?"
+- Go/no-go decision point on pipeline deal
+
+**Actions:**
+- Analyze win/loss data and generate pattern reports (what's working, what's not, by vertical/size/competitor)
+- Maintain competitor profiles with recent wins, positioning, known strengths/weaknesses
+- Generate pre-pitch competitive briefing when a competitive set is identified
+- Recommend go/no-go based on historical probability given the specific vertical, deal size, and competitive set
+- Produce quarterly "State of New Business" report with trends, insights, and strategic recommendations
+- Alert when a competitor wins in a vertical where the agency has been investing
+
+**Data Required:**
+- Win/Loss Analysis board (complete historical data)
+- Industry press monitoring feeds
+- Competitor agency websites and case study pages
+- Pipeline board for context on active pursuits
+- Industry benchmarks for win rates
+
+**Autonomy Level:** Fully Autonomous
+All analysis, monitoring, and report generation runs without human intervention. Recommendations are advisory — humans make the strategic decisions about which pitches to pursue and how to position.
+
+**Example Interaction:**
+> The Head of New Business is evaluating whether to pursue a $2M Healthcare AOR opportunity. She triggers the agent: "What are our odds on this one?" The Competitive Intelligence Agent responds: "Based on your last 8 Healthcare pitches: win rate is 25% (2/8). Key pattern: both wins were mid-market clients ($1-3M) where you led with digital transformation strategy. Both losses to agencies with dedicated healthcare practices. The competitive set includes MedComms Agency (they've won 4 of the last 6 healthcare reviews under $5M — your toughest competitor in this vertical) and GeneralAgency (weaker healthcare credentials, likely included for procurement diversity). Recommendation: Pursue. Your win probability is approximately 30% given the mid-market size and digital focus. Key differentiator should be your integrated tech + creative capability — something MedComms lacks. Suggest staffing Dr. Sarah Kim (ex-pharma strategist) as pitch lead to counter the specialist positioning."
+
+---
+
+## Industry Terminology
+
+| Term | Definition |
+|------|-----------|
+| AOR (Agency of Record) | Primary agency relationship — typically a multi-year retainer covering a broad scope of services |
+| Pitch | The formal presentation and competition process where agencies vie for a client's business |
+| RFP (Request for Proposal) | Formal document from a prospective client outlining requirements and evaluation criteria for agency selection |
+| RFI (Request for Information) | Preliminary inquiry — less formal than RFP, used to shortlist agencies before the formal pitch |
+| Tissue Session | Mid-pitch meeting where the agency presents work-in-progress to the client for directional feedback |
+| Chemistry Meeting | Early-stage meeting to assess cultural and interpersonal fit between agency and client teams |
+| Spec Work | Speculative creative work produced for a pitch — not paid, done to demonstrate capability |
+| Search Consultant | Third-party firms (e.g., AAR Partners, Pile & Company) hired by clients to manage agency reviews |
+| Creds Deck | Credentials presentation — the agency's portfolio and capabilities overview |
+| Competitive Set | The group of agencies pitching for the same piece of business |
+| Blended Rate | Weighted average hourly rate across the proposed team (mixes senior and junior rates) |
+| Retainer | Ongoing monthly fee for a defined scope of work (vs. project-based billing) |
+| Scope Creep | Work performed beyond the contracted scope — a major margin risk for agencies |
+| Organic Growth | Revenue expansion from existing clients (vs. new business wins) |
+| Billings | Total media and production spend managed by the agency (different from agency revenue/fees) |
+| SOW (Statement of Work) | Detailed document defining deliverables, timelines, and fees for a specific engagement |
+| QBR (Quarterly Business Review) | Structured review meeting between agency and client to assess performance and plan ahead |
 
 ## Typical Stakeholder Roles
 
-**Primary Buyer: VP/Director of New Business**
-- Title: VP Business Development, Director of New Business, Chief Growth Officer
-- Concerns: Pipeline visibility, win rate improvement, team efficiency, forecast accuracy
-- Decision driver: "Can I win more with the same team?"
-
-**Technical Evaluator: BizDev Manager / Pitch Lead**
-- Title: New Business Manager, Pitch Manager, BD Manager
-- Concerns: Ease of use, research capabilities, time savings, integration with existing tools
-- Decision driver: "Will this actually help me prepare better pitches faster?"
-
-**Executive Sponsor: CEO / President**
-- Title: CEO, President, Managing Director
-- Concerns: Revenue growth, competitive positioning, client acquisition cost
-- Decision driver: "Will we grow faster and win more premium clients?"
-
-**Client Services Stakeholder: Account Leadership**
-- Title: Group Account Director, Managing Director (Client Service)
-- Concerns: Pitch team coordination, transition from pitch to account, cross-sell opportunities
-- Decision driver: "Will this improve how we pitch and onboard new clients?"
-
-**End Users:**
-- BizDev team, Pitch teams (rotating cast), Account directors, Agency leadership
-
----
+| Role | Responsibility | Influence |
+|------|---------------|-----------|
+| Chief Growth Officer / Head of New Business | Owns pipeline, pitch strategy, and win rate | Decision-maker for go/no-go and pitch investment |
+| New Business Director | Day-to-day pipeline management, prospect outreach, pitch coordination | Decision-maker for pursuit tactics |
+| Business Development Representative (BDR) | Outbound prospecting, lead qualification, initial outreach | Influencer — feeds the top of funnel |
+| Pitch Coordinator / New Business Manager | Logistics, content assembly, timeline management for active pitches | Influencer — operational backbone |
+| CEO / Managing Director | Pitch presenter (gravitas), final sign-off on pricing and resource allocation | Decision-maker for major pursuits |
+| CFO / Finance Director | Revenue forecasting, pricing approval, resource budgeting | Decision-maker for financial commitments |
+| Chief Creative Officer | Creative pitch leadership, spec work approval, talent allocation | Decision-maker for creative investment |
+| Chief Strategy Officer | Strategic direction, client insight, pitch narrative | Decision-maker for positioning and approach |
+| Account Director / AE | Existing client relationships, organic growth, account health | Influencer — owns retention revenue |
 
 ## Adjacent Departments
 
-| Department | Connection Point | Cross-Sell Opportunity |
-|------------|------------------|------------------------|
-| **Marketing** | Content for outreach, case studies, events | Marketing automation integration |
-| **Account Services** | Expansion opportunities, referrals, case study input | Client relationship management |
-| **Creative** | Pitch creative, spec work, case study assets | Creative workflow integration |
-| **Operations** | Pitch resource allocation, project scoping | Resource management |
-| **Strategy** | Pitch strategy, prospect research | Strategic planning tools |
-| **Finance** | Pricing, profitability, revenue forecasting | Financial management |
-
----
+| Department | Connection | Opportunity |
+|-----------|-----------|-------------|
+| Creative & Design | Creative teams produce pitch materials, spec work; sales coordinates their involvement | Work Management for creative workflows, resource planning, asset management |
+| Marketing (Agency's own) | Agency marketing generates inbound leads, case studies, thought leadership | Marketing workflows for the agency's own brand campaigns |
+| Operations | Resource allocation, utilization tracking, staffing across pitches and client work | Capacity planning, resource management dashboards |
+| Finance | Pricing, rate cards, revenue recognition, profitability analysis | Financial reporting, automated invoicing, margin tracking |
+| HR | Recruiting (agencies have high turnover), team bios, D&I reporting for RFPs | Talent pipeline, onboarding, compliance reporting |
+| IT | Tech stack for pitches (prototyping, demo environments), martech capabilities | IT project management, vendor management |
 
 ## Competitive Landscape
 
-**Current Tools:**
-| Category | Common Tools | Displacement Opportunity |
-|----------|--------------|--------------------------|
-| CRM | HubSpot, Salesforce, Pipedrive | Replace (especially for SMB/MM agencies) |
-| Pitch Management | Notion, Google Docs, Spreadsheets | Full replacement |
-| Research | LinkedIn Sales Navigator, ZoomInfo | Integrate; AI assistance augments |
-| Outreach | Outreach.io, Salesloft, Lemlist | Replace or integrate |
-| Case Studies | Notion, Sharepoint, scattered docs | Full replacement |
+| Tool | Positioning | Displacement Opportunity |
+|------|------------|------------------------|
+| Salesforce | Enterprise CRM — agencies often have poorly configured instances | monday CRM is simpler, faster to configure for agency sales cycles; agencies don't need enterprise CRM complexity |
+| HubSpot | Marketing/sales automation — popular with smaller agencies | monday.com offers broader work management + CRM in one platform; agencies need project management alongside pipeline |
+| Pipedrive | Simple pipeline management — used by agencies wanting lightweight CRM | monday CRM matches simplicity but adds cross-functional collaboration that Pipedrive lacks |
+| Google Sheets / Excel | The incumbent "system" for most agency pipeline tracking | Any structured tool wins here — monday.com adds automation, visibility, and collaboration |
+| Workamajig / Advantage | Agency-specific project management + accounting | Niche and outdated UX; monday.com is more modern, flexible, and integrable |
+| Asana / Wrike | Project management for pitch coordination | monday.com combines PM + CRM in one platform; agencies can track pipeline and pitch projects together |
 
-**Positioning:**
-- **vs. Salesforce**: "Salesforce is built for product sales with short cycles and clear stages. Agency sales is different — longer cycles, relationship-driven, pitch-centric. You need a system that fits how agency sales actually works, not a generic CRM you'll never fully adopt."
-- **vs. HubSpot**: "HubSpot is great for inbound-focused businesses. Agency BizDev is outbound, relationship-driven, and pitch-intensive. You need research tools, pitch management, and case study assembly that HubSpot doesn't offer."
-- **vs. Spreadsheets**: "Your pipeline in a spreadsheet is invisible to leadership, impossible to forecast from, and loses all context when people leave. A real system compounds your learning over time."
+## Objection Handling
 
----
+| Objection | Response |
+|-----------|----------|
+| "We already use Salesforce for pipeline" | "How well does Salesforce handle the pitch coordination side — task management, creative team workflows, resource allocation? Most agencies we work with find CRM is just one piece; the real challenge is connecting pipeline to the cross-functional pitch process. monday.com does both." |
+| "Our pipeline is too relationship-based for a CRM" | "That's exactly why you need a system — relationship-based means institutional knowledge lives in people's heads. When your Head of New Business leaves, so does your pipeline intelligence. monday.com captures the context alongside the deal data." |
+| "We're too small / we don't have enough deals to justify a system" | "If you're running even 5-10 pitches a year, each one represents significant revenue. The question isn't volume — it's win rate. Even a 5% improvement in win rate on $500K average deal size pays for the platform many times over." |
+| "Our creative team won't use another tool" | "They don't have to live in it. The Vibe prompts and automations mean the system comes to them — notifications in Slack, tasks auto-created, briefs pre-populated. They interact with it naturally through the tools they already use." |
+| "We've tried project management tools for pitches before and adoption died" | "Adoption fails when the tool adds work without removing it. monday.com replaces email chains, spreadsheets, and status meetings. When the pitch coordinator stops sending 'where is your content?' emails because the board shows it automatically, adoption follows." |
 
-## Common Objections
-
-**Objection**: "We're a relationship business. Systems can't capture what we do."
-
-**Response**: "Of course relationships matter. But relationships don't mean invisible processes. What happens to pipeline knowledge when your top BizDev person leaves? How do you know which relationships are actually turning into opportunities? A system captures and preserves relationship intelligence — it doesn't replace relationships."
-
----
-
-**Objection**: "We don't do enough pitches to need a system."
-
-**Response**: "That's the problem. You probably should be doing more proactive business development, but you don't have the infrastructure to support it. A system isn't just for managing what you do today — it's for scaling what you could do tomorrow."
+## Proof Points
+*(To be populated with customer references)*
+- [Agency case studies with new business process improvements]
+- [Win rate improvement metrics from structured pitch management]
+- [Revenue forecasting accuracy improvements]
+- [BDR productivity gains from AI-assisted prospecting]
 
 ---
 
-**Objection**: "Our team won't use a CRM — we've tried."
-
-**Response**: "Most CRMs fail in agencies because they're built for product sales. Nobody wants to fill in fields that don't matter. monday.com is different — it's flexible, so you design it for how you actually work. Plus, AI reduces the admin burden. What if the system worked for your team instead of against them?"
-
----
-
-*Playbook Version: 1.0*  
-*Industry: Advertising & Marketing*  
-*Department: Sales*  
-*Last Updated: 2026-02-11*
+*Generated: February 18, 2026 | Version: 2.0 (with Vibe Prompts + Agent Blueprints)*
